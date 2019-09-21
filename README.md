@@ -1,5 +1,6 @@
 # 大数据学习系列之Hadoop
 
+### HDFS
 #### 启动hadoop集群
 ```
 sbin/start-dfs.sh
@@ -17,3 +18,10 @@ sbin/start-yarn.sh
 -put 等同于copyFromLocal
 -setrep 设置HDFS中文件的副本数量
 ```
+
+### MapReduce学习
+MapTask阶段和ReduceTask阶段3.Driver阶段,相当于Yarn集群客户端，用于提交整个程序到Yarn集群，提交的是封装了MapReduce程序相关运行参数的job对象
+> 缺点:1.不擅长实时计算,2.不擅长流式计算,流式计算输入是动态的,而MapReduce输入数据集是静态的3.不擅长DAG计算（多个应用之间存在依赖关系,后一个应用程序的输入为前一个应用程序的输出.每个MapReduce作业的输出结果都会写入磁盘,会造成大量磁盘IO,会导致性能低下）
+
+
+
