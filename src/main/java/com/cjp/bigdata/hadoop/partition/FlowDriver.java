@@ -25,6 +25,7 @@ public class FlowDriver {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(FlowBean.class);
 
+        // 设置分区类以及分区数
         job.setPartitionerClass(FlowPartition.class);
         job.setNumReduceTasks(3);
 
