@@ -30,7 +30,7 @@ public class Main {
                 }
                 flag = false;
             } else if (temp < k - 1) {
-                minK(k, arr, temp + 1, k - 1);
+                minK(k, arr, temp + 1, high);
             } else {
                 minK(k, arr, low, temp - 1);
             }
